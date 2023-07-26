@@ -26,11 +26,18 @@ public:
 
 };
 
+Animal *createAnimal() {
+    Animal *pAnimal = new Animal();
+    pAnimal->setName("Jerry");
+    return pAnimal;
+}
+
 int main() {
-    Animal *animal = new Animal();
-    animal->setName("Zoja");
-    animal->speak();
-    delete animal;
+    Animal *mouse = createAnimal();
+    
+    mouse->speak();
+
+    delete mouse;
     
     return 0;
 }
